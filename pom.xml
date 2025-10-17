@@ -25,10 +25,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.2.5</version>
                     <configuration>
-                        <systemPropertyVariables>
-                            <file.encoding>UTF-8</file.encoding>
-                        </systemPropertyVariables>
-
+                        <argLine>-Dfile.encoding=UTF-8</argLine>
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>

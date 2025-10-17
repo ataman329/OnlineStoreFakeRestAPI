@@ -6,7 +6,6 @@ import java.text.*;
 import java.util.*;
 import pojo.*;
 
-@SuppressWarnings("deprecation")
 public class Payload {
 
     private static final Faker faker=new Faker();
@@ -51,8 +50,8 @@ public class Payload {
 
         //User
         String email=faker.internet().emailAddress();
-        String username=faker.internet().domainWord() + faker.number().digits(3);
-        String password = faker.internet().password();
+        String username = faker.internet().domainWord() + faker.number().digits(3);
+        String password = faker.bothify("??##??##");
         String phonenumber=faker.phoneNumber().cellPhone();
 
         User user=new User(email,username,password,name,address,phonenumber);
@@ -82,8 +81,8 @@ public class Payload {
     //login
     public static Login loginPayload()
     {
-        String username=faker.name().username();
-        String password=faker.internet().password();
+        String username = faker.internet().domainWord() + faker.number().digits(3);
+        String password = faker.bothify("??##??##");
 
         Login login=new Login(username,password);
         return login;
