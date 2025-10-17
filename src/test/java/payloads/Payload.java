@@ -6,6 +6,7 @@ import java.text.*;
 import java.util.*;
 import pojo.*;
 
+@SuppressWarnings("deprecation")
 public class Payload {
 
     private static final Faker faker=new Faker();
